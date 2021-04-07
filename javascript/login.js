@@ -18,8 +18,8 @@ continueBtn.onclick = () => {
                 if (data === "success"){
                     location.href = "users.php";
                 }else{
-                    errorText.textContent = data;
                     errorText.style.display = "block";
+                    errorText.textContent = data;
                 }
             }
         }
