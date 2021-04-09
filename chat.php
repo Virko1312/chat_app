@@ -26,45 +26,18 @@ if (!isset($_SESSION['unique_id'])){
             </div>
         </header>
         <div class="chat-box">
-            <div class="chat outgoing">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet ohahaghihiihgashi...</p>
-                </div>
-            </div>
-            <div class="chat incoming">
-                <img src="img.jpg" alt="">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet oabfifsgćopjsgopj...</p>
-                </div>
-            </div>
-            <div class="chat outgoing">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet ohahaghihiihgashi...</p>
-                </div>
-            </div>
-            <div class="chat incoming">
-                <img src="img.jpg" alt="">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet oabfifsgćopjsgopj...</p>
-                </div>
-            </div>
-            <div class="chat outgoing">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet ohahaghihiihgashi...</p>
-                </div>
-            </div>
-            <div class="chat incoming">
-                <img src="img.jpg" alt="">
-                <div class="details">
-                    <p>Lorem ipsum dolor sit amet oabfifsgćopjsgopj...</p>
-                </div>
-            </div>
+
         </div>
-        <form action="#" class="typing-area">
-            <input type="text" placeholder="Type a message here...">
+        <form action="#" class="typing-area" autocomplete="off">
+            <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden>
+            <input type="text" name="incoming_id" value="<?php echo $user_id ?>" hidden>
+            <input type="text" name="message" class="input-field" placeholder="Type a message here...">
             <button><i class="fab fa-telegram-plane"></i></button>
         </form>
     </section>
 </div>
+
+<script src="javascript/chat.js"></script>
+
 </body>
 </html>
